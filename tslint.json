@@ -1,0 +1,9 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+      "tslint-stencil/default"
+    ],
+    "jsRules": {},
+    "rules": {},
+    "rulesDirectory": []
+}

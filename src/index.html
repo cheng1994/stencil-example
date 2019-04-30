@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script src="./build/my-dropdown.js"></script>
+
+</head>
+<body>
+  <my-dropdown>
+    <label slot="title">Comics</label>
+    <span slot="icon" class="fas fa-caret-down"></span>
+  </my-dropdown>
+  <script>
+    const object = [
+      {
+        label: 'Spiderman',
+        publisher: 'Marvel'
+      },
+      {
+        label: 'Batman',
+        publisher: 'DC'
+      },
+      {
+        label: 'Saga',
+        publisher: 'Image Comics'
+      },
+      {
+        label: 'Hellboy',
+        publisher: 'Dark Horse Comics'
+      }
+    ];
+
+    const el = document.querySelector('my-dropdown');
+    el.listItems = object;
+    el.addEventListener('clickedItem', (event) => {
+      console.log(event);
+    })
+  </script>
+</body>
+</html>
